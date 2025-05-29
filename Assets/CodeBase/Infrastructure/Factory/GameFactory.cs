@@ -11,16 +11,24 @@ namespace CodeBase.Infrastructure.Factory
     {
         private readonly IAssets _assets;
 
+        public event Action HeroCreated;
+
         public List<ISavedProgessReader> ProgessReaders { get; } = new List<ISavedProgessReader>();
         public List<ISavedProgress> ProgressWriters { get; } = new List<ISavedProgress>();
+
+        public GameObject HeroGameObject { get; set; }
 
         public GameFactory(IAssets assets)
         {
             _assets = assets;
         }
 
-        public GameObject CreateHero(GameObject at) => 
-            InstantiateRegistered(AssetPath.HeroPath, at.transform.position);
+        public GameObject CreateHero(GameObject at)
+        {
+            HeroGameObject = InstantiateRegistered(AssetPath.HeroPath, at.transform.position);
+            HeroCreated?.Invoke();
+            return HeroGameObject;
+        }
 
         public void CreateHud() =>
             InstantiateRegistered(AssetPath.HudPath);
