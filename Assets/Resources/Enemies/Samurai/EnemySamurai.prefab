@@ -1385,6 +1385,8 @@ GameObject:
   - component: {fileID: 9592700}
   - component: {fileID: 2330184574567491300}
   - component: {fileID: 4538007352481272152}
+  - component: {fileID: 7987963151581179530}
+  - component: {fileID: 7869416965427661701}
   m_Layer: 0
   m_Name: EnemySamurai
   m_TagString: Untagged
@@ -1469,6 +1471,33 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7987963151581179530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e4497c3973fc2409e208e5dbb5d6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Agent: {fileID: 4538007352481272152}
+--- !u!114 &7869416965427661701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddedf805c20d27d4b9b7cc3356960fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Agent: {fileID: 4538007352481272152}
+  Animator: {fileID: 2330184574567491300}
 --- !u!1 &142912
 GameObject:
   m_ObjectHideFlags: 0
