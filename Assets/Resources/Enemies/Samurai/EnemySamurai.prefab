@@ -1383,9 +1383,9 @@ GameObject:
   m_Component:
   - component: {fileID: 414896}
   - component: {fileID: 9592700}
-  - component: {fileID: 2330184574567491300}
   - component: {fileID: 4538007352481272152}
-  - component: {fileID: 7987963151581179530}
+  - component: {fileID: 2330184574567491300}
+  - component: {fileID: 3837304640935699980}
   - component: {fileID: 7869416965427661701}
   - component: {fileID: 7121663422677720029}
   m_Layer: 0
@@ -1439,18 +1439,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2330184574567491300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc453f3bb4c9d74c9be4c340b5f451a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!195 &4538007352481272152
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1473,7 +1461,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7987963151581179530
+--- !u!114 &2330184574567491300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1482,7 +1470,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 141740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e4497c3973fc2409e208e5dbb5d6e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fc453f3bb4c9d74c9be4c340b5f451a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3837304640935699980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59b9ca8c548a1f429d77ea8e6ff3a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Agent: {fileID: 4538007352481272152}
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerObserver: {fileID: 8952034128247448867}
-  Follow: {fileID: 7987963151581179530}
+  Follow: {fileID: 3837304640935699980}
   Cooldown: 3
 --- !u!1 &142912
 GameObject:
