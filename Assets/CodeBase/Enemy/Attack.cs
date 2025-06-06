@@ -63,7 +63,7 @@ namespace CodeBase.Enemy
 
         private Vector3 StartPoint()
         {
-            return new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z) + transform.forward * EffectiveDistance;
+            return new Vector3(transform.position.x, transform.position.y + 0.7f, transform.position.z) + transform.forward * EffectiveDistance;
         }
 
         private void OnAttackEnded()

@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 2330184574567491300}
-  AttackCooldown: 1
+  AttackCooldown: 3
   Cleavage: 0.5
   EffectiveDistance: 0.5
 --- !u!114 &4771712568676014909
@@ -3833,7 +3833,7 @@ GameObject:
   - component: {fileID: 2701160653346458793}
   - component: {fileID: 2863933295662360147}
   - component: {fileID: 8989797229814439238}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: AttackZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3865,7 +3865,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 1.5
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8989797229814439238
 MonoBehaviour:
