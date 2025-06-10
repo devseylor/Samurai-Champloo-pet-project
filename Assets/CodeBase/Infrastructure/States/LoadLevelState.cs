@@ -4,6 +4,8 @@ using CodeBase.Logic;
 using CodeBase.Infrastructure.Factory;
 using System;
 using CodeBase.Infrastructure.Services.PersistentProgress;
+using CodeBase.UI;
+using CodeBase.Hero;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -51,11 +53,24 @@ namespace CodeBase.Infrastructure.States
 
         private void InitGameWorld()
         {
-            GameObject hero = _gameFactory.CreateHero(at: GameObject.FindWithTag(InitialPointTag));
+            GameObject hero = InitHero();
 
-            _gameFactory.CreateHud();
+            InitHud(hero);
 
             CameraFollow(hero);
+        }
+
+        private GameObject InitHero()
+        {
+            return _gameFactory.CreateHero(at: GameObject.FindWithTag(InitialPointTag));
+        }
+
+        private void InitHud(GameObject hero)
+        {
+            GameObject hud = _gameFactory.CreateHud();
+
+            hud.GetComponentInChildren<ActorUI>() 
+                .Consctruct(hero.GetComponent<HeroHealth>());
         }
 
         private void CameraFollow(GameObject hero)
